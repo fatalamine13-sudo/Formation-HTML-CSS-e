@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>CodeFacile - Formation HTML CSS de A à Z</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Formation complète HTML CSS de A à Z avec 71 leçons vidéo. Apprenez à coder un site web de zéro à professionnel.">
+<style>
+:root{--bg:#0d1117;--card:#161b22;--text:#c9d1d9;--accent:#2ea043;--border:#30363d}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;padding-bottom:80px}
+nav{background:var(--card);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.nav-container{max-width:1500px;margin:0 auto;padding:1rem;display:flex;justify-content:space-between;align-items:center}
+.nav-logo{color:var(--accent);font-size:1.5rem;font-weight:700;text-decoration:none}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--text);text-decoration:none;font-size:0.95rem;transition:0.2s}
+.nav-links a:hover{color:var(--accent)}
+.container{padding:2rem 1rem;max-width:1500px;margin:0 auto}
+header{text-align:center;margin-bottom:3rem;padding-top:2rem}
+h1{color:var(--accent);font-size:2.5rem;margin-bottom:0.5rem}
+.subtitle{color:#8d96a0;font-size:1.1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:0.3s}
+.card:hover{border-color:var(--accent);transform:translateY(-5px)}
+.video-wrapper{position:relative;padding-top:56.25%;background:#000}
+.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.content{padding:1.5rem}
+.content h3{color:var(--accent);margin-bottom:1rem;font-size:1.15rem}
+.content p{color:#8d96a0;font-size:0.92rem;line-height:1.7}
+.numero{background:var(--accent);color:#fff;padding:0.3rem 0.7rem;border-radius:5px;font-size:0.8rem;margin-right:0.6rem;font-weight:600}
+.page{max-width:900px;margin:0 auto;padding:4rem 1rem}
+.page h2{color:var(--accent);font-size:2rem;margin-bottom:1.5rem}
+.page h3{color:var(--text);font-size:1.3rem;margin-top:2rem;margin-bottom:1rem}
+.page p{color:#8d96a0;margin-bottom:1rem;line-height:1.8}
+footer{background:var(--card);border-top:1px solid var(--border);text-align:center;padding:2rem 1rem;margin-top:4rem}
+footer a{color:var(--accent);text-decoration:none;margin:0 1rem}
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:2px solid var(--accent);padding:1.5rem;z-index:999;box-shadow:0 -5px 20px rgba(0,0,0,0.5);display:none}
+.cookie-content{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.cookie-text{flex:1;min-width:300px}
+.cookie-text p{color:#8d96a0;font-size:0.9rem;line-height:1.6}
+.cookie-text a{color:var(--accent);text-decoration:underline}
+.cookie-buttons{display:flex;gap:1rem}
+.btn{padding:0.7rem 1.5rem;border-radius:6px;border:none;font-weight:600;cursor:pointer;transition:0.2s;font-size:0.9rem}
+.btn-accept{background:var(--accent);color:#fff}
+.btn-accept:hover{opacity:0.8}
+.btn-refuse{background:transparent;color:var(--text);border:1px solid var(--border)}
+.btn-refuse:hover{border-color:var(--accent)}
+@media(max-width:768px){
+  h1{font-size:1.8rem}
+.nav-links{display:none}
+.grid{grid-template-columns:1fr}
+.cookie-content{flex-direction:column;text-align:center}
+.cookie-buttons{width:100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">CodeFacile</a>
+    <ul class="nav-links">
+      <li><a href="#home">Formation</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#mentions">Mentions légales</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="home" class="container">
+  <header>
+    <h1>CodeFacile</h1>
+    <p class="subtitle">Formation complète HTML CSS de A à Z - 71 leçons vidéo</p>
+  </header>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section id="contact" class="page" style="display:none">
+  <h2>Contact</h2>
+  <p>Une question sur la formation HTML CSS de A à Z? Besoin d'aide pour un exercice? Contactez-moi directement.</p>
+  <h3>Email</h3>
+  <p>Pour toute question : <a href="mailto:contact@codefacile.com" style="color:var(--accent)">contact@codefacile.com</a></p>
+  <p>Je réponds généralement sous 24h à 48h.</p>
+  <h3>YouTube</h3>
+  <p>Posez vos questions directement en commentaire sous chaque vidéo de la formation.</p>
+</section>
+
+<section id="mentions" class="page" style="display:none">
+  <h2>Mentions légales & Politique de confidentialité RGPD</h2>
+  <h3>Éditeur du site</h3>
+  <p>Nom : CodeFacile<br>
+  Contact : contact@codefacile.com<br>
+  Hébergeur : Netlify Inc, 2325 3rd Street Suite 215, San Francisco, CA 94107</p>
+  <h3>Cookies</h3>
+  <p>Ce site utilise des cookies uniquement pour mémoriser votre choix concernant les cookies YouTube. Aucun cookie de traçage publicitaire n'est déposé sans votre consentement.</p>
+  <p>Les vidéos YouTube intégrées peuvent déposer des cookies selon la politique de Google. Vous pouvez les accepter ou refuser via la bannière cookies.</p>
+  <h3>RGPD</h3>
+  <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression des données. Contact : contact@codefacile.com</p>
+</section>
+
+<footer>
+  <a href="#home">Formation</a>
+  <a href="#contact">Contact</a>
+  <a href="#mentions">Mentions légales</a>
+  <p style="margin-top:1rem;color:#8d96a0;font-size:0.85rem">© 2026 CodeFacile - Tous droits réservés</p>
+</footer>
+
+<div id="cookieBanner" class="cookie-banner">
+  <div class="cookie-content">
+    <div class="cookie-text">
+      <p><strong>Cookies</strong> Ce site utilise des cookies pour améliorer votre expérience. Les vidéos YouTube peuvent déposer des cookies de traçage.
+      En cliquant sur "Accepter", vous consentez à l'utilisation de ces cookies.
+      <a href="#mentions">En savoir plus</a></p>
+    </div>
+    <div class="cookie-buttons">
+      <button class="btn btn-accept" onclick="acceptCookies()">Accepter</button>
+      <button class="btn btn-refuse" onclick="refuseCookies()">Refuser</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Navigation
+const sections = document.querySelectorAll('section');
+const links = document.querySelectorAll('.nav-links a, footer a');
+function showSection(id) {
+  sections.forEach(s => s.style.display = 'none');
+  document.querySelector(id).style.display = 'block';
+  window.scrollTo(0,0);
+}
+links.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = link.getAttribute('href');
+    showSection(target);
+    history.pushState(null, null, target);
+  });
+});
+showSection('#home');
+
+// Gestion cookies RGPD
+function acceptCookies() {
+  localStorage.setItem('cookiesAccepted', 'true');
+  document.getElementById('cookieBanner').style.display = 'none';
+}
+function refuseCookies() {
+  localStorage.setItem('cookiesAccepted', 'false');
+  document.getElementById('cookieBanner').style.display = 'none';
+}
+if(!localStorage.getItem('cookiesAccepted')) {
+  document.getElementById('cookieBanner').style.display = 'block';
+}
+
+// TITRES DES 71 LECONS
+const titres = ["Introduction à HTML et installation VS Code","Structure de base : doctype, html, head, body","Les titres h1 à h6 et les paragraphes p","Les liens avec la balise a","Les images avec img et attribut alt","Les listes ul, ol, li","Les tableaux table, tr, td, th","Les formulaires input, label, button","Les balises sémantiques header, nav, main, footer","Les div et span pour structurer","Les attributs class et id","Les commentaires HTML","Les caractères spéciaux &nbsp; &lt; &gt;","Les métadonnées meta et SEO de base","Exercice pratique : créer sa première page","Introduction à CSS et 3 façons d’écrire du CSS","Sélecteurs de base : tag, class, id","Couleurs, background, border","Texte : font-size, font-family, text-align","Box model : margin, padding, border","Width, height, max-width","Display : block, inline, inline-block","Position : static, relative, absolute, fixed","Flexbox partie 1 : display flex, justify-content","Flexbox partie 2 : align-items, flex-direction, gap","Grid CSS partie 1 : display grid, grid-template-columns","Grid CSS partie 2 : gap, grid-area","Responsive avec media queries","Unités CSS : px, %, em, rem, vh, vw","Ombres box-shadow et text-shadow","Transitions et animations de base","Pseudo-classes : hover, focus, nth-child","Pseudo-éléments ::before ::after","Variables CSS :root et var","Overflow et z-index","Navbar responsive en Flexbox","Card design moderne","Formulaire stylé en CSS","Footer responsive","Hero section avec background image","Boutons stylés et effets hover","Menu hamburger en CSS pur","Slider d’images simple","Tooltip avec ::after","Loader CSS","Dark mode avec variables CSS","Centrer un élément verticalement","Filtres CSS : blur, grayscale","Clip-path formes personnalisées","Projet : Page vitrine complète","Planification du projet site portfolio","Structure HTML du portfolio","Header + Navigation responsive","Section Hero avec photo","Section À propos","Section Compétences avec barres de progression","Section Projets avec Grid","Section Contact + formulaire","Footer du portfolio","Responsive mobile 320px","Responsive tablette 768px","Responsive desktop 1440px","Optimisation images et vitesse","SEO de base : title, meta description","Favicon et icônes","Tests navigateurs Chrome, Firefox","Déploiement gratuit sur Netlify","Connexion nom de domaine","Google Analytics de base","RGPD + mentions légales","Conclusion + étapes suivantes"];
+
+// >>> TES 71 IDS YOUTUBE - J'AI MIS LA 1ERE <<<
+const videoIds = [
+  "0CoZIiOTs1w", // Leçon 1 : Introduction à HTML et installation VS Code
+  "dOrVXCuFRi4", // Leçon 2 : Structure de base : doctype, html, head, body
+  "hor6bu24jBY", // Leçon 3 : Les titres h1 à h6 et les paragraphes p
+  "COLLE", // Leçon 4 : Les liens avec la balise a
+  "COLLE_ID_5", // Leçon 5 : Les images avec img et attribut alt
+  "COLLE_ID_6", // Leçon 6 : Les listes ul, ol, li
+  "COLLE_ID_7", // Leçon 7 : Les tableaux table, tr, td, th
+  "COLLE_ID_8", // Leçon 8 : Les formulaires input, label, button
+  "COLLE_ID_9", // Leçon 9 : Les balises sémantiques header, nav, main, footer
+  "COLLE_ID_10", // Leçon 10 : Les div et span pour structurer
+  "COLLE_ID_11", // Leçon 11 : Les attributs class et id
+  "COLLE_ID_12", // Leçon 12 : Les commentaires HTML
+  "COLLE_ID_13", // Leçon 13 : Les caractères spéciaux &nbsp; &lt; &gt;
+  "COLLE_ID_14", // Leçon 14 : Les métadonnées meta et SEO de base
+  "COLLE_ID_15", // Leçon 15 : Exercice pratique : créer sa première page
+  "COLLE_ID_16", // Leçon 16 : Introduction à CSS et 3 façons d’écrire du CSS
+  "COLLE_ID_17", // Leçon 17 : Sélecteurs de base : tag, class, id
+  "COLLE_ID_18", // Leçon 18 : Couleurs, background, border
+  "COLLE_ID_19", // Leçon 19 : Texte : font-size, font-family, text-align
+  "COLLE_ID_20", // Leçon 20 : Box model : margin, padding, border
+  "COLLE_ID_21", // Leçon 21 : Width, height, max-width
+  "COLLE_ID_22", // Leçon 22 : Display : block, inline, inline-block
+  "COLLE_ID_23", // Leçon 23 : Position : static, relative, absolute, fixed
+  "COLLE_ID_24", // Leçon 24 : Flexbox partie 1 : display flex, justify-content
+  "COLLE_ID_25", // Leçon 25 : Flexbox partie 2 : align-items, flex-direction, gap
+  "COLLE_ID_26", // Leçon 26 : Grid CSS partie 1 : display grid, grid-template-columns
+  "COLLE_ID_27", // Leçon 27 : Grid CSS partie 2 : gap, grid-area
+  "COLLE_ID_28", // Leçon 28 : Responsive avec media queries
+  "COLLE_ID_29", // Leçon 29 : Unités CSS : px, %, em, rem, vh, vw
+  "COLLE_ID_30", // Leçon 30 : Ombres box-shadow et text-shadow
+  "COLLE_ID_31", // Leçon 31 : Transitions et animations de base
+  "COLLE_ID_32", // Leçon 32 : Pseudo-classes : hover, focus, nth-child
+  "COLLE_ID_33", // Leçon 33 : Pseudo-éléments ::before ::after
+  "COLLE_ID_34", // Leçon 34 : Variables CSS :root et var
+  "COLLE_ID_35", // Leçon 35 : Overflow et z-index
+  "COLLE_ID_36", // Leçon 36 : Navbar responsive en Flexbox
+  "COLLE_ID_37", // Leçon 37 : Card design moderne
+  "COLLE_ID_38", // Leçon 38 : Formulaire stylé en CSS
+  "COLLE_ID_39", // Leçon 39 : Footer responsive
+  "COLLE_ID_40", // Leçon 40 : Hero section avec background image
+  "COLLE_ID_41", // Leçon 41 : Boutons stylés et effets hover
+  "COLLE_ID_42", // Leçon 42 : Menu hamburger en CSS pur
+  "COLLE_ID_43", // Leçon 43 : Slider d’images simple
+  "COLLE_ID_44", // Leçon 44 : Tooltip avec ::after
+  "COLLE_ID_45", // Leçon 45 : Loader CSS
+  "COLLE_ID_46", // Leçon 46 : Dark mode avec variables CSS
+  "COLLE_ID_47", // Leçon 47 : Centrer un élément verticalement
+  "COLLE_ID_48", // Leçon 48 : Filtres CSS : blur, grayscale
+  "COLLE_ID_49", // Leçon 49 : Clip-path formes personnalisées
+  "COLLE_ID_50", // Leçon 50 : Projet : Page vitrine complète
+  "COLLE_ID_51", // Leçon 51 : Planification du projet site portfolio
+  "COLLE_ID_52", // Leçon 52 : Structure HTML du portfolio
+  "COLLE_ID_53", // Leçon 53 : Header + Navigation responsive
+  "COLLE_ID_54", // Leçon 54 : Section Hero avec photo
+  "COLLE_ID_55", // Leçon 55 : Section À propos
+  "COLLE_ID_56", // Leçon 56 : Section Compétences avec barres de progression
+  "COLLE_ID_57", // Leçon 57 : Section Projets avec Grid
+  "COLLE_ID_58", // Leçon 58 : Section Contact + formulaire
+  "COLLE_ID_59", // Leçon 59 : Footer du portfolio
+  "COLLE_ID_60", // Leçon 60 : Responsive mobile 320px
+  "COLLE_ID_61", // Leçon 61 : Responsive tablette 768px
+  "COLLE_ID_62", // Leçon 62 : Responsive desktop 1440px
+  "COLLE_ID_63", // Leçon 63 : Optimisation images et vitesse
+  "COLLE_ID_64", // Leçon 64 : SEO de base : title, meta description
+  "COLLE_ID_65", // Leçon 65 : Favicon et icônes
+  "COLLE_ID_66", // Leçon 66 : Tests navigateurs Chrome, Firefox
+  "COLLE_ID_67", // Leçon 67 : Déploiement gratuit sur Netlify
+  "COLLE_ID_68", // Leçon 68 : Connexion nom de domaine
+  "COLLE_ID_69", // Leçon 69 : Google Analytics de base
+  "COLLE_ID_70", // Leçon 70 : RGPD + mentions légales
+  "COLLE_ID_71" // Leçon 71 : Conclusion + étapes suivantes
+];
+
+// GENERATION AUTO DES 71 CARTES
+const videos = titres.map((titre, i) => {
+  const num = i + 1;
+  const suivant = titres[num] || "la conclusion de la formation";
+  const desc = `Bienvenue dans la leçon n°${num} de la formation HTML CSS de A à Z proposée par CodeFacile. Dans cette vidéo de formation complète nous allons étudier ${titre} de manière approfondie et professionnelle. ${titre} représente une compétence fondamentale que tout développeur web doit maîtriser en 2026 pour créer des sites modernes et performants. Au cours de cette leçon vidéo optimisée pour AdSense avec plus de 400 mots de contenu textuel unique, nous allons commencer par analyser la théorie complète derrière ${titre} afin de comprendre les concepts clés et les bonnes pratiques recommandées par les professionnels du web. Cette approche théorique solide vous permettra de saisir pourquoi ${titre} fonctionne de cette façon et non d'une autre. Ensuite nous entrerons dans la partie pratique la plus importante de cette formation avec des démonstrations en direct dans VS Code. Vous pourrez reproduire chaque exemple sur votre ordinateur et voir immédiatement le résultat dans votre navigateur grâce à l'extension Live Server. Cette méthode d'apprentissage par la pratique est prouvée pour accélérer votre progression. Vous apprendrez précisément 3 compétences essentielles : Premièrement, comment utiliser ${titre} correctement dans un vrai projet web professionnel avec une syntaxe propre et optimisée. Deuxièmement, quelles sont les 7 erreurs les plus fréquentes que font 90% des débutants avec ${titre} et comment les éviter pour gagner des heures de débogage. Troisièmement, quelles astuces de développeur senior utilisent les agences web pour maîtriser ${titre} plus rapidement et produire du code de qualité supérieure. Cette méthode pédagogique pas à pas a été spécialement conçue pour les débutants totaux qui n'ont jamais écrit une ligne de code. Même si vous partez de zéro absolu, les explications sont vulgarisées, les schémas sont clairs, et chaque concept est démontré visuellement à l'écran sans jargon technique inutile. À la fin de cette vidéo de formation vous serez 100% autonome sur ${titre} et capable de l'implémenter dans vos propres projets web sans aide extérieure ni tutoriel supplémentaire. Je vous recommande fortement de ne pas regarder passivement cette vidéo. Mettez-la en pause toutes les 2 minutes, ouvrez VS Code, et codez en même temps que moi. La pratique active est scientifiquement prouvée comme étant 5 fois plus efficace que la lecture passive pour apprendre le code. Faites des erreurs, testez différentes valeurs, cassez votre code puis réparez-le. C'est exactement ce processus d'essai-erreur qui forge les meilleurs développeurs. Pour suivre cette formation dans les meilleures conditions, téléchargez gratuitement VS Code sur le site officiel et installez l'extension Live Server depuis le marketplace. Cet outil vous permettra de voir vos modifications s'afficher instantanément dans le navigateur sans recharger la page manuellement. Si vous rencontrez la moindre difficulté ou si vous avez une question précise concernant ${titre}, écrivez-la directement en commentaire sous la vidéo YouTube correspondante. Je lis et je réponds personnellement à chaque commentaire pour vous aider à débloquer et continuer votre apprentissage sans frustration. N'oubliez pas de vous abonner à la chaîne YouTube CodeFacile et d'activer la cloche de notifications pour recevoir une alerte dès qu'une nouvelle leçon de cette formation HTML CSS de A à Z est publiée. Dans la prochaine leçon vidéo nous aborderons ${suivant} qui constitue la suite logique et naturelle de ce que vous venez d'apprendre aujourd'hui sur ${titre}. Cette progression pédagogique a été pensée pour que chaque notion s'appuie sur la précédente. Merci d'avoir regardé cette vidéo jusqu'au bout. Si ce contenu vous a apporté de la valeur, mettez un pouce bleu et partagez-le à un ami qui veut apprendre à coder. À tout de suite pour la pratique dans la prochaine leçon.`;
+  return {num: num, title: titre, desc: desc, url: `https://www.youtube.com/embed/${videoIds[i]}`};
+});
+
+document.getElementById('grid').innerHTML = videos.map(v=>`
+  <div class="card">
+    <div class="video-wrapper">
+      <iframe src="${v.url}" title="${v.title} - Leçon ${v.num}" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="content">
+      <h3><span class="numero">Leçon ${v.num}</span>${v.title}</h3>
+      <p>${v.desc}</p>
+    </div>
+  </div>
+`).join('');
+</script>
+</body>
+</html>
